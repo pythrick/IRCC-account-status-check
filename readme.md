@@ -12,12 +12,11 @@ Works on selenium and can be run on local machine.
 ### Run
 1. `pip install -r requirements.txt`.<br>
 
+2. Enter `config.py` your security information for script's work. Get chatID - add @getidsbot
 
-2.  Enter `config.py` your security information for script's work. Get chatID - add @getidsbot
+3. Copy `config.json.template` to `config.json` and fill it with your data.
 
+4. Run `main.py`
 
-3. Run `main.py` 
-
-NOTE: if you have error with webdriver-manager run `pip install webdriver-manager`
 
 P.S. Try to find how launch on server for 24/7 check profile.
