@@ -1,7 +1,13 @@
+from pathlib import Path
+
 import requests
 import json
 
-with open('config.json') as config_file:
+
+BASE_DIR = Path(__file__).resolve().parent
+
+
+with open(BASE_DIR / 'config.json') as config_file:
     data = json.load(config_file)
     token = data["token"]
     chatID = data["chatID"]
@@ -18,4 +24,4 @@ def send_telegram(text: str):
     })
 
     if r.status_code != 200:
-        raise Exception("post_text error")
+        raise Exception(f"post_text error. Details: {r.status_code} {r.text}")
